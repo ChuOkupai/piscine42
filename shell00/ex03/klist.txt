@@ -1,0 +1,6 @@
+Credentials cache: API:597EA158-C46F-4F28-9226-87F55BEEEF86
+        Principal: asoursou@42.FR
+
+  Issued                Expires               Principal
+Jul  1 08:56:05 2019  Jul  8 08:56:05 2019  krbtgt/42.FR@42.FR
+Jul  1 09:46:20 2019  Jul  8 08:56:05 2019  host/vgs-fn1.42.fr@42.FR
