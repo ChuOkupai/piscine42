@@ -6,11 +6,11 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 03:11:19 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/03 03:11:44 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/03 15:18:43 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int n;
 
