@@ -6,20 +6,20 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/08 03:52:29 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/08 06:53:51 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/08 09:22:50 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_find_next_prime(int nb)
 {
-	int i;
+	unsigned int i;
 
 	if (nb < 3)
 		return (2);
 	if (!(nb % 2))
 		nb++;
 	i = 3;
-	while (i * i <= nb)
+	while (i * i <= (unsigned int)nb)
 	{
 		if (!(nb % i))
 		{

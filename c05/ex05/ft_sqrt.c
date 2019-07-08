@@ -6,16 +6,18 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 09:06:22 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/08 05:54:43 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/08 09:16:16 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int i;
+	unsigned int i;
 
+	if (nb < 1)
+		return (0);
 	i = 1;
-	while (i * i < nb)
+	while (i * i < (unsigned int)nb)
 		i++;
-	return ((i * i == nb) ? i : 0);
+	return ((i * i == (unsigned int)nb) ? i : 0);
 }

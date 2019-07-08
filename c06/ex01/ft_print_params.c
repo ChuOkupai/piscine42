@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/07 09:35:19 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/08 09:29:31 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/08 07:56:58 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/08 07:58:53 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	unsigned int i;
+#include <unistd.h>
 
-	if (nb < 3 || !(nb % 2))
-		return (nb == 2);
-	i = 3;
-	while (i * i <= (unsigned int)nb)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int		ft_strlen(char *str)
+{
+	int n;
+
+	n = 0;
+	while (str[n])
+		n++;
+	return (n);
+}
+
+void	ft_putstr(char *str)
+{
+	write(1, str, ft_strlen(str));
+}
+
+int		main(int argc, char **argv)
+{
+	int i;
+
+	i = 0;
+	while (++i < argc)
 	{
-		if (!(nb % i))
-			return (0);
-		i += 2;
+		ft_putstr(argv[i]);
+		ft_putchar('\n');
 	}
-	return (1);
+	return (0);
 }
