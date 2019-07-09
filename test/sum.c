@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   sum.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/08 07:56:58 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/08 23:45:06 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/08 23:19:13 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/08 23:29:35 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c)
+int	sum(int n)
 {
-	write(1, &c, 1);
+	if (n < 1)
+		return (0);
+	return (n + sum(n - 1));
 }
 
-void	ft_putstr(char *str)
+int	main(int argc, char **argv)
 {
-	while (*str)
-		ft_putchar(*str++);
-}
-
-int		main(int argc, char **argv)
-{
-	int i;
-
-	i = 1;
-	while (i < argc)
-	{
-		ft_putstr(argv[i++]);
-		ft_putchar('\n');
-	}
+	if (argc == 2)
+		printf("%d", sum(atoi(argv[1])));
 	return (0);
 }
