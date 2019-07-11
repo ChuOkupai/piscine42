@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/09 03:20:37 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/09 03:20:43 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/09 03:30:38 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/09 21:36:52 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c)
+int	*ft_range(int min, int max)
 {
-	write(1, &c, 1);
-}
+	int *t;
+	int i;
 
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
-}
-
-int		main(int argc, char **argv)
-{
-	if (argc)
-	{
-		ft_putstr(argv[0]);
-		ft_putchar('\n');
-	}
-	return (0);
+	if (min >= max)
+		return (NULL);
+	max -= min;
+	t = malloc(max * sizeof(int));
+	if (!t)
+		return (NULL);
+	i = -1;
+	while (++i < max)
+		t[i] = min + i;
+	return (t);
 }
