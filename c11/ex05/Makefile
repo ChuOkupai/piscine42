@@ -1,5 +1,7 @@
 SRCS		= ft_atoi.c \
+			  ft_op.c \
 			  ft_putchar.c \
+			  ft_putnbr.c \
 			  ft_putstr.c \
 			  ft_strlen.c \
 			  main.c

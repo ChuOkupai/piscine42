@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_do-op.c                                         :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/17 05:08:56 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/17 05:44:03 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/17 01:43:23 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/17 03:40:08 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
-
-int		ft_sum(int a, int b)
+int	ft_count_if(char **tab, int length, int (*f)(char*))
 {
-	return (a + b);
-}
+	int i;
+	int n;
 
-int		ft_sub(int a, int b)
-{
-	return (a - b);
-}
-
-int		ft_div(int a, int b)
-{
-	return (a / b);
-}
-
-int		ft_mul(int a, int b)
-{
-	return (a * b);
-}
-
-int		ft_mod(int a, int b)
-{
-	return (a % b);
+	i = 0;
+	n = 0;
+	while (i < length)
+		if (f(tab[i++]))
+			n++;
+	return (n);
 }

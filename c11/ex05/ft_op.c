@@ -6,33 +6,39 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 05:08:56 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/17 05:44:03 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/17 14:41:39 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int		ft_sum(int a, int b)
+void	ft_sum(int a, int b)
 {
-	return (a + b);
+	ft_putnbr(a + b);
 }
 
-int		ft_sub(int a, int b)
+void	ft_sub(int a, int b)
 {
-	return (a - b);
+	ft_putnbr(a - b);
 }
 
-int		ft_div(int a, int b)
+void	ft_div(int a, int b)
 {
-	return (a / b);
+	if (b)
+		ft_putnbr(a / b);
+	else
+		ft_putstr("Stop : division by zero");
 }
 
-int		ft_mul(int a, int b)
+void	ft_mul(int a, int b)
 {
-	return (a * b);
+	ft_putnbr(a * b);
 }
 
-int		ft_mod(int a, int b)
+void	ft_mod(int a, int b)
 {
-	return (a % b);
+	if (b)
+		ft_putnbr(a % b);
+	else
+		ft_putstr("Stop : modulo by zero");
 }
