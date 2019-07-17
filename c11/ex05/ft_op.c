@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do-op.c                                            :+:      :+:    :+:   */
+/*   ft_do-op.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/17 04:21:05 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/17 05:52:48 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/17 05:08:56 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/17 05:44:03 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	ft_get_index(char *str)
+int		ft_sum(int a, int b)
 {
-	if (!*str || *str[1])
-		return (-1);
-	if ()
-	
-	return (-1);
+	return (a + b);
 }
 
-int	main(int argc, char **argv)
+int		ft_sub(int a, int b)
 {
-	int (*op[5])(int, int);
-	int i;
+	return (a - b);
+}
 
-	if (argc == 4 && (i = ft_get_index(argv[3])) >= 0)
-	{
-		;
-	}
-	return (0);
+int		ft_div(int a, int b)
+{
+	return (a / b);
+}
+
+int		ft_mul(int a, int b)
+{
+	return (a * b);
+}
+
+int		ft_mod(int a, int b)
+{
+	return (a % b);
 }
