@@ -6,19 +6,9 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 15:09:08 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/17 15:12:47 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/17 17:37:01 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int		ft_strcmp(char *s1, char *s2)
-{
-	while (*s1 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
-}
 
 void	ft_strswap(char **a, char **b)
 {

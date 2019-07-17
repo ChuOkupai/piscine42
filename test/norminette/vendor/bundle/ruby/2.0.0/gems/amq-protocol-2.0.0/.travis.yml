@@ -1,0 +1,14 @@
+language: ruby
+bundler_args: --without development
+script: "bundle exec rspec spec"
+rvm:
+  - 2.2
+  - 2.1
+  - 2.0
+  - ruby-head
+notifications:
+  recipients:
+    - michael@rabbitmq.com
+matrix:
+  allow_failures:
+    - rvm: ruby-head

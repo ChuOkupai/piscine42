@@ -1,0 +1,22 @@
+language: ruby
+bundler_args: --without development
+before_script: "./bin/ci/before_build"
+script: "bundle exec rspec -cf documentation spec"
+rvm:
+  - "2.2"
+  - "2.1"
+  - "2.0"
+  - "jruby"
+  - "rbx"
+notifications:
+  email: michael@rabbitmq.com
+services:
+  - rabbitmq
+branches:
+  only:
+    - master
+    - 1.4.x-stable
+matrix:
+  allow_failures:
+    - rvm: rbx
+    - rvm: jruby

@@ -1,0 +1,21 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    CFPropertyList (2.2.8)
+    amq-protocol (2.0.0)
+    bunny (2.2.0)
+      amq-protocol (>= 2.0.0)
+    facter (2.4.4)
+      CFPropertyList (~> 2.2.6)
+    json (1.8.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bunny
+  facter
+  json
+
+BUNDLED WITH
+   1.17.1
