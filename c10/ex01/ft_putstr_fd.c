@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/16 22:19:44 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/16 22:19:46 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/12 15:42:27 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/16 22:43:32 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+#include <unistd.h>
+#include "ft.h"
 
-	i = -1;
-	while (++i < n && src[i])
-		dest[i] = src[i];
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+void	ft_putstr_fd(char *str, int fd)
+{
+	write(fd, str, ft_strlen(str));
 }

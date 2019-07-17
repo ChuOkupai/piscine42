@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_puterr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/16 22:19:44 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/16 22:19:46 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/16 17:15:38 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/16 22:43:18 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+#include <unistd.h>
+#include "ft.h"
 
-	i = -1;
-	while (++i < n && src[i])
-		dest[i] = src[i];
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+void	ft_puterr(char *bin, char *path, char *error)
+{
+	ft_putstr_fd(bin, STDERR_FILENO);
+	ft_putstr_fd(": ", STDERR_FILENO);
+	ft_putstr_fd(path, STDERR_FILENO);
+	ft_putstr_fd(": ", STDERR_FILENO);
+	ft_putstr_fd(error, STDERR_FILENO);
+	ft_putchar_fd('\n', STDERR_FILENO);
 }

@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/16 22:19:44 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/16 22:19:46 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/06 06:20:50 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/07 02:35:23 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_atoi(char *str)
 {
-	unsigned int i;
+	int n;
+	int negative;
 
-	i = -1;
-	while (++i < n && src[i])
-		dest[i] = src[i];
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	negative = 0;
+	while (*str == '-' || *str == '+')
+		if (*str++ == '-')
+			negative = 1 - negative;
+	n = 0;
+	while (*str >= '0' && *str <= '9')
+		n = n * 10 + *str++ - '0';
+	if (negative)
+		n *= -1;
+	return (n);
 }

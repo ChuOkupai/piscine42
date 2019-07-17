@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/16 22:19:44 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/16 22:19:46 by asoursou         ###   ########.fr       */
+/*   Created: 2019/07/14 22:17:46 by asoursou          #+#    #+#             */
+/*   Updated: 2019/07/16 17:41:42 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+#include <fcntl.h>
+#include <unistd.h>
 
-	i = -1;
-	while (++i < n && src[i])
-		dest[i] = src[i];
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+int	ft_display_file(char *path)
+{
+	char	buf[2048];
+	int		fd;
+	int		len;
+
+	fd = (path) ? open(path, O_RDONLY) : STDIN_FILENO;
+	if (fd < 0)
+		return (-1);
+	while ((len = read(fd, buf, 2048)) > 0)
+		write(1, buf, len);
+	if (fd != STDIN_FILENO)
+		close(fd);
+	return ((len) ? -1 : 0);
 }
