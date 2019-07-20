@@ -6,7 +6,7 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 04:39:28 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/03 16:17:41 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/19 04:47:28 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 int		ft_is_sorted(int *tab, int size)
 {
 	while (--size > 0)
-				if (tab[size] < tab[size - 1])
-								return (0);
+		if (tab[size] < tab[size - 1])
+			return (0);
 		return (1);
 }
 
