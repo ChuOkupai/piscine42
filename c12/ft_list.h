@@ -6,7 +6,7 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 18:47:15 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/20 05:09:01 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/22 01:41:33 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void				ft_list_foreach_if(t_list *begin_list, void (*f)(void *),
 t_list				*ft_list_find(t_list *begin_list, void *data_ref,
 					int (*cmp)());
 
-void				ft_list_remove_if(t_list **begin_list, void *data_ref, 
+void				ft_list_remove_if(t_list **begin_list, void *data_ref,
 					int (*cmp)(), void (*free_fct)(void *));
 
 void				ft_list_merge(t_list **begin_list1, t_list *begin_list2);

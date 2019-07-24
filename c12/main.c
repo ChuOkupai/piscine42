@@ -6,7 +6,7 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 04:23:59 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/20 05:10:59 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/22 01:41:59 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_list_print(t_list *l)
 	ft_list_print(l->next);
 }
 
-t_list	*ft_list_create()
+t_list	*ft_list_create(void)
 {
 	t_list *l;
 
@@ -52,7 +52,7 @@ int		main(int argc, char **argv)
 		printf("%s\n", e->data);
 	else
 		printf("NULL\n");
-	ft_list_reverse(&l);
+	ft_list_reverse_fun(l);
 	printf("reverse content: ");
 	ft_list_print(l);
 	ft_list_sort(&l, &strcmp);
