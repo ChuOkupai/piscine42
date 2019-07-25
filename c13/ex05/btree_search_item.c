@@ -6,7 +6,7 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 07:44:38 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/22 08:50:08 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/25 06:26:54 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 void	*btree_search_item(t_btree *root, void *data_ref,
 		int (*cmpf)(void *, void *))
 {
-	void *data;
+	void *item;
 
 	if (!root)
 		return (NULL);
-	if ((data = btree_search_item(root->left, data_ref, cmpf)))
-		return (data);
+	if ((item = btree_search_item(root->left, data_ref, cmpf)))
+		return (item);
 	if (!cmpf(data_ref, root->item))
-		return (root);
+		return (root->item);
 	return (btree_search_item(root->right, data_ref, cmpf));
 }

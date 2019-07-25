@@ -6,7 +6,7 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 06:13:56 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/25 00:22:15 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/25 09:42:14 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,7 @@ void	btree_print(t_btree *node, unsigned int deep)
 
 void	btree_ultimate_print(void *item, int level, int is_first_elem)
 {
-	if (is_first_elem)
-		putchar('*');
-	printf("%d,", level);
-	printf("%s ", item);
+	printf("[%s] l:[%d] f:[%d]\n", item, level, is_first_elem);
 }
 
 int		ft_fakestrcmp(void *s1, void *s2)

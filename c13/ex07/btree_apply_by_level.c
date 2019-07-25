@@ -6,7 +6,7 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:42:49 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/25 00:24:26 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/25 09:47:10 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ void		btree_apply_by_level(t_btree *root, void (*applyf)(void *item,
 	i = 0;
 	while (i < h)
 	{
-		t[0] = ++i;
+		t[0] = i;
 		t[1] = 1;
-		btree_process_level(root, t, i, applyf);
+		btree_process_level(root, t, ++i, applyf);
 	}
 }

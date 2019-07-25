@@ -6,7 +6,7 @@
 /*   By: asoursou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 07:27:10 by asoursou          #+#    #+#             */
-/*   Updated: 2019/07/20 07:27:57 by asoursou         ###   ########.fr       */
+/*   Updated: 2019/07/25 03:01:10 by asoursou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	btree_apply_suffix(t_btree *root, void (*applyf)(void *))
 		return ;
 	btree_apply_suffix(root->left, applyf);
 	btree_apply_suffix(root->right, applyf);
-	applyf(root);
+	applyf(root->item);
 }
