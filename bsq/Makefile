@@ -5,8 +5,8 @@ SRCS		= ft_find_biggest_square.c \
 
 OBJS		= $(addprefix srcs/, ${SRCS:.c=.o})
 
-HEADERS		= bsq.h \
-			  ft.h
+SRC_HEADERS	= ft.h
+HEADERS		:= $(addprefix includes/, ${SRC_HEADERS})
 
 NAME		= bsq
 
@@ -14,10 +14,10 @@ CFLAGS		= -Wall -Wextra -Werror -Ofast
 
 all:		${NAME}
 
-${NAME}:	${OBJS}
+${NAME}:	${OBJS} ${HEADERS}
 			gcc ${CFLAGS} ${OBJS} -o $@
 
-.c.o:
+.c.o:		${HEADERS}
 			gcc ${CFLAGS} -I./includes -c $< -o ${<:.c=.o}
 
 clean:
