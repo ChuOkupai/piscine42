@@ -4,8 +4,10 @@ Toutes les journées sont terminées, il manque un exercice sur le jour 10 de C
 
 Le rush02 est broken, RIP :skull:
 
-Certaines fonctions ne sont pas optimisées (notamment ft_strstr), mais elles fonctionnent :man_shrugging:
+Certaines fonctions ne sont pas optimisées, notamment ft_strstr, mais elles fonctionnent :man_shrugging:
+
+Check [vimcake](https://github.com/ChuOkupai/vimcake) pour une config vim simple et efficace pour débuter !
 
 Ce code n'est pas sous license, le copier n'est cependant pas le meilleur moyen de progresser, à bon entendeur.
 
-Check [vimcake](https://github.com/ChuOkupai/vimcake) pour une config vim simple et efficace pour débuter !
+![alt text](https://i.redd.it/5iinczbed0yz.jpg)
